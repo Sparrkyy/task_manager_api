@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 // });
 
 mongoose.connect(
-	'mongodb+srv://Ethan:POkSdc0s8UWsHx47@task-app-node-course.rlcrw.mongodb.net/Task-App-Node-Course?retryWrites=true&w=majority',
+	process.env.CONNECTION_STRING,
 	{
 		useNewUrlParser: true,
 		useCreateIndex: true,
@@ -15,14 +15,3 @@ mongoose.connect(
 	}
 );
 
-// const ENV = process.env.NODE_ENV || 'development';
-
-// mongoose
-// 	.connect(
-// 		'mongodb+srv://Ethan:POkSdc0s8UWsHx47@task-app-node-course.rlcrw.mongodb.net/Task-App-Node-Course?retryWrites=true&w=majority',
-// 		{ useNewUrlParser: true, useUnifiedTopology: true }
-// 	)
-// 	.then(() => console.info(`Mongo [${ENV}] connection successfully.`))
-// 	.catch((err) => {
-// 		console.error(`Mongo [${ENV}] connection ERROR! `, err);
-// 	});

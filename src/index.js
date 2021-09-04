@@ -1,4 +1,6 @@
 const express = require('express');
+const dotenv = require('dotenv')
+dotenv.config()
 require('./db/mongoose');
 const User = require('./models/users');
 const Task = require('./models/tasks');
