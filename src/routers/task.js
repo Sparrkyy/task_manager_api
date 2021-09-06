@@ -70,6 +70,7 @@ router.delete('/tasks/:id', auth, async (req, res) => {
 });
 
 router.post('/tasks', auth, async (req, res) => {
+	console.log(req.body)
 	const tempTask = new Task({
 		...req.body,
 		owner: req.user._id,
