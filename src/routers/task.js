@@ -78,6 +78,7 @@ router.post('/tasks', auth, async (req, res) => {
 		const savedTask = await tempTask.save();
 		res.status(201).send(savedTask);
 	} catch (e) {
+		console.log(e)
 		res.status(400).send('Wasnt able to create a task');
 	}
 });
